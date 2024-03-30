@@ -91,10 +91,9 @@ function loadingAnimation() {
     opacity:0,
    } ,"-=1.2");
 }
-loadingAnimation();
 
 function  cursorAnimation(){
-
+  
   document.addEventListener('mousemove', function(dets){
     gsap.to("#crsr" , {
       left:dets.x ,
@@ -103,7 +102,25 @@ function  cursorAnimation(){
   });
   
   Shery.makeMagnet("#nav-part2 h4");
-}
-cursorAnimation();
+  
+   var videoContainer = document.querySelector("#video-container")
+   videoContainer.addEventListener("mouseenter" , function(){
+      alert("hehey")
+  })
 
+
+}
+
+cursorAnimation();
 locomotiveAnimation();
+loadingAnimation();  
+
+function sheryAnimation(){
+   shery.imageEffects(".image-div" , {
+    style:5,
+    debug: true ,
+     gooey:true
+   })
+}
+ 
+sheryAnimation();
